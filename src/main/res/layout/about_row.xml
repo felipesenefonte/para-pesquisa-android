@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+    android:onClick="showText"
+    android:id="@+id/text_root">
+
+    <com.lfdb.parapesquisa.ui.FontTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Lorem Ipsum"
+            android:id="@+id/about_row_title"
+            android:textColor="#000"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="22dp"
+            android:textSize="22dp"
+            android:layout_alignParentRight="false"
+            android:typeface="sans"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+        android:layout_marginRight="50dp"
+        ntxdev:font_weight="300"/>
+
+    <com.lfdb.parapesquisa.ui.FontTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lipsum"
+            android:id="@+id/about_row_description"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:layout_below="@+id/about_row_title"
+            android:layout_alignLeft="@+id/about_row_title"
+            android:layout_marginTop="5dp"
+            android:textSize="13dp"
+            android:layout_alignParentRight="true"
+            android:typeface="sans"
+        android:layout_marginRight="50dp" />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/bt_seta"
+            android:scaleType="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+        android:layout_centerVertical="true" />
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+        android:layout_below="@+id/about_row_description"
+        android:layout_marginTop="22dp">
+    </FrameLayout>
+
+</RelativeLayout>

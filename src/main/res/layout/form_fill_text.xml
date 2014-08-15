@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#fff">
+
+    <com.lfdb.parapesquisa.ui.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lipsum"
+            android:id="@+id/form_input_label"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="false"
+        android:layout_marginTop="11dp"
+            android:textSize="16dp"
+            android:textColor="#000"
+        ntxdev:font_weight="300"
+        android:layout_toRightOf="@+id/form_input_number" />
+
+    <com.lfdb.parapesquisa.ui.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lipsum"
+            android:id="@+id/form_input_hint"
+            android:layout_marginBottom="0dp"
+            android:layout_alignParentBottom="false"
+            android:textSize="12dp"
+            android:textColor="#6d6767"
+            android:layout_alignLeft="@+id/form_input_label"
+        android:layout_below="@+id/form_input_value"
+        android:layout_marginTop="10dp"
+        ntxdev:font_weight="300"/>
+
+    <com.lfdb.parapesquisa.ui.FontTextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:id="@+id/form_input_number"
+            android:layout_alignTop="@+id/form_input_label"
+            android:textColor="#666"
+        android:textSize="16dp"
+        ntxdev:font_weight="300"
+        android:layout_marginRight="12dp"
+        android:gravity="right" />
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:id="@+id/form_input_value"
+            android:background="#f7f7f7"
+            android:paddingLeft="16dp"
+            android:textSize="14dp"
+            android:textColor="#666"
+            android:layout_alignLeft="@+id/form_input_label"
+            android:layout_below="@+id/form_input_label"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="95dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+        android:inputType="text|textNoSuggestions" />
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fff"
+            android:alpha=".5"
+            android:visibility="gone"
+            android:id="@+id/form_input_disabledmask"
+            android:clickable="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/form_input_hint">
+    </FrameLayout>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/form_input_baloon"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/modorevisao_icon_comentar"
+            android:layout_marginRight="26dp"
+            android:focusable="false"
+        android:scaleType="center"
+        android:layout_centerVertical="true"
+        android:padding="10dp" />
+
+</RelativeLayout>

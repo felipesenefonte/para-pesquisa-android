@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="activity_overlay" />
+    <item type="id" name="activity_overlaycontainer" />
+    <item type="id" name="activity_overlaycontent" />
+
+    <item type="id" name="activity_touroverlay" />
+    <item type="id" name="activity_touroverlaycontainer" />
+    <item type="id" name="guidedtour_hint" />
+    <item type="id" name="guidedtour_focus" />
+
+    <item type="id" name="submission_input_name" />
+    <item type="id" name="submission_comment_input_name" />
+    <item type="id" name="radio_item" />
+    <item type="id" name="logs_row" />
+    <item type="id" name="logs_row_formid" />
+    <item type="id" name="listitem_context" />
+    <item type="id" name="listitem_value" />
+    <item type="id" name="user_id" />
+</resources>

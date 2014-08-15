@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#333">
+
+    <ImageView
+            android:layout_width="53dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/notifications_button"
+            android:src="@drawable/header_bt_notificacoes"
+            android:scaleType="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp"/>
+
+    <view
+            class="com.lfdb.parapesquisa.ui.RoundIndicator"
+            ntxdev:color="#97D000"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:id="@+id/notification_badge"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp"/>
+
+    <ImageView
+            android:layout_width="54dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/menubar_refresh"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/notifications_button"
+            android:src="@drawable/header_bt_sync"
+            android:scaleType="center"/>
+
+    <ImageView
+            android:layout_width="53dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/menubar_search"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/menubar_refresh"
+            android:src="@drawable/header_bt_search"
+            android:scaleType="center"
+            android:visibility="visible"/>
+
+    <ImageView
+            android:layout_width="53dp"
+            android:layout_height="match_parent"
+            android:id="@+id/menubar_swap"
+            android:layout_toLeftOf="@+id/menubar_search"
+            android:src="@drawable/header_bt_transferir"
+            android:scaleType="center"/>
+
+    <ImageView
+            android:layout_width="53dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/menubar_add"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/menubar_swap"
+            android:src="@drawable/header_bt_novopreenchimento"
+            android:scaleType="center"/>
+
+    <ImageView
+            android:layout_width="53dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/menubar_logs"
+            android:layout_alignParentTop="false"
+            android:src="@drawable/header_bt_relatorio"
+            android:scaleType="center"
+            android:clickable="true"
+            android:layout_toLeftOf="@+id/menubar_add"/>
+</RelativeLayout>

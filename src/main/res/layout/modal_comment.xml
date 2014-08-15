@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingLeft="27dp"
+              android:paddingRight="27dp">
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="64dp"
+            android:background="#e5e5e5">
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Novo comentário"
+                android:id="@+id/modal_title"
+                android:background="#e5e5e5"
+                android:textColor="#4e4e4e"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:layout_gravity="center"
+            ntxdev:font_weight="300"/>
+    </FrameLayout>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc">
+    </FrameLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="163dp"
+            android:focusableInTouchMode="false"
+            android:id="@+id/modal_content"
+        android:background="#fff"
+        android:padding="20dp">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="1dp"
+            android:background="#ccc">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/form_comment_text"
+                android:textColor="#6f6f6f"
+                android:inputType="text|textNoSuggestions|textMultiLine"
+                android:gravity="left|top"
+                android:padding="20dp"
+                android:background="#fff"
+                android:textSize="16dp"
+                android:singleLine="false"
+                android:textCursorDrawable="@null"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"
+            android:id="@+id/frameLayout">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="67dp"
+                android:background="#fff"
+            android:id="@+id/modal_cancel"
+            android:clickable="true"
+            android:layout_weight="1">
+
+            <com.lfdb.parapesquisa.ui.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                android:background="#fff"
+                    android:textColor="#6f6f6f"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                ntxdev:font_weight="300"/>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone"
+                android:id="@+id/click_mask"
+                android:background="#555"
+                android:alpha=".5"></FrameLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#ccc"></FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:id="@+id/modal_ok">
+
+            <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ok"
+                android:layout_gravity="center"
+                android:textColor="#6f6f6f" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/click_mask"
+                android:background="#555"
+                android:alpha=".5"
+                android:visibility="gone"></FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,323 @@
+{
+   "pages":[
+      {
+         "activity":"FormsActivity",
+         "data":[
+            {
+               "title":"Esta é a tela inicial",
+               "text":"Bem vindo ao aplicativo Para Pesquisa. Este guia irá te ajudar a compreender os botões e funcionalidades do aplicativo. Quando você quiser ir para a próxima explicação, toque na tela para continuar e o aplicativo irá te guiar durante a navegação.",
+               "center": "both",
+               "margin": [50, 0, 50, 0]
+            },
+            {
+               "title":"Menu do aplicativo",
+               "text":"Este é o menu para acessar outros itens do aplicativo como Relatórios, Sair, Ajuda, etc.",
+               "action":"showMenu",
+               "alignLeftRight":"forms_menu_list",
+               "focus": "forms_menu_list",
+               "center": "vertical",
+               "arrow": "left",
+               "margin": [20, 0, 0, 0]
+            },
+            {
+               "title":"Listagem de Pesquisas",
+               "text":"Aqui serão apresentados todas as pesquisas que estão sob sua responsabilidade. Pode ter um ou mais pesquisas atribuídos a você.",
+               "action":"hideMenu",
+               "alignBottomTop":"forms_scroll",
+               "focus": "forms_scroll",
+               "margin": [50, -20, 50, 0]
+            },
+            {
+               "title":"Número de preenchimentos restantes",
+               "text":"Este número indica quantos preenchimentos faltam para acabar a pesquisa. Fique atento pois este número é importante para o seu acompanhamento.",
+               "condition":"form.hasQuota",
+               "alignBottomTop":"forms_row_indicator",
+               "alignLeftLeft":"forms_row_indicator",
+               "focus": "forms_row_indicator",
+               "margin": [0, -20, 0, 0]
+            },
+            {
+               "title":"Data de inicio e término",
+               "text":"A pesquisa tem a data de inicio e pode ter a data de término. É aqui que será mostrada a contagem para o término da pequisa, fique atento.",
+               "condition":"form.hasDeadline",
+               "alignBottomTop": "forms_row_deadline",
+               "alignLeftLeft": "forms_row_deadline",
+               "focus": "forms_row_deadline",
+               "margin": [0, -20, 50, 0]
+            },
+            {
+               "title":"Relatório Global",
+               "text":"Neste relatório você pode consultar quantas pesquisas foram realizadas, o número restante de pesquisas que precisam ser preenchidos, aprovados e aqueles que requer a sua revisão.",
+               "condition":"user.isCoordinator",
+               "alignRightRight":"forms_logs_icon",
+               "alignTopBottom":"forms_logs_icon",
+               "focus": "forms_logs_icon",
+               "align": "right",
+               "margin": [50, 20, 0, 0]
+            },
+            {
+               "title":"Formulários",
+               "text":"Aqui você pode ver o número de formulários de pesquisas que você é responsável. Você pode tocar em uma dos formulários para visualizar as estatísticas apenas daquela Pesquisa que está em andamento.",
+               "action":"showLogs",
+               "condition":"user.isCoordinator",
+               "alignTopBottom": "logs_myforms",
+               "alignLeftLeft": "logs_myforms",
+               "alignRightRight": "logs_myforms",
+               "focus": "logs_myforms",
+               "margin": [0, 20, 0, 0]
+            },
+            {
+               "title":"Pesquisadores",
+               "text":"Aqui você poderá ver o número de pesquisadores que estão atribuídos a você",
+               "condition":"user.isCoordinator",
+               "alignTopBottom": "logs_myusers",
+               "alignLeftLeft": "logs_myusers",
+               "alignRightRight": "logs_myusers",
+               "focus": "logs_myusers",
+               "margin": [0, 20, 0, 0]
+            },
+            {
+               "title":"Total de pesquisas",
+               "text":"Veja o número total de pesquisas que precisam ser preenchidas por seus Pesquisadores.",
+               "condition":"user.isCoordinator",
+               "alignBottomTop": "logs_hint_total",
+               "alignLeftLeft": "logs_hint_total",
+               "alignRightRight": "logs_hint_total",
+               "focus": "logs_hint_total",
+               "margin": [0, -20, 0, 0]
+            },
+            {
+               "title":"Pesquisas faltantes",
+               "text":"O número que aparece aqui esta relacionado a quantidade total de pesquisas que ainda precisam ser preenchidas por seus Pesquisadores.",
+               "condition":"user.isCoordinator",
+               "alignBottomTop": "logs_hint_remaining",
+               "alignLeftLeft": "logs_hint_remaining",
+               "alignRightRight": "logs_hint_remaining",
+               "focus": "logs_hint_remaining",
+               "margin": [0, -20, 0, 0]
+            },
+            {
+               "title":"Aprovados",
+               "text":"A medida que você for aprovando as pesquisas, elas serão exibidas nas estatísticas e você poderá ver aqui.",
+               "condition":"user.isCoordinator",
+               "alignBottomTop": "logs_hint_approved",
+               "alignLeftLeft": "logs_hint_approved",
+               "alignRightRight": "logs_hint_approved",
+               "focus": "logs_hint_approved",
+               "margin": [0, -20, 0, 0]
+            },
+            {
+               "title":"Atenção",
+               "text":"Este ícone requer sua atenção, aqui será mostrado o número total de pesquisas que necessitam serem corrigidos por seus Pesquisadores ou que ainda estão incompletos.",
+               "condition":"user.isCoordinator",
+               "alignBottomTop": "logs_hint_misc",
+               "alignLeftLeft": "logs_hint_misc",
+               "alignRightRight": "logs_hint_misc",
+               "action": "setFormId",
+               "focus": "logs_hint_misc",
+               "margin": [0, -20, 0, 0]
+            }
+         ]
+      },
+      {
+         "activity":"FormActivity",
+         "data":[
+            {
+               "title":"Apresentação",
+               "text":"Esta é a tela das pesquisas de um formulário, é aqui que você poderá aprovar, reprovar, consultar e também editar as informações que um Pesquisador preencheu.",
+               "center": "both",
+               "margin": [50, 0, 50, 0],
+               "condition": "user.isCoordinator"
+            },
+            {
+               "title":"Apresentação",
+               "text":"Esta é a tela das pesquisas de um formulário, é aqui que você poderá preencher e enviar as suas pesquisas.",
+               "center": "both",
+               "margin": [50, 0, 50, 0],
+               "condition": "!user.isCoordinator"
+            },
+            {
+               "title":"Botão voltar",
+               "text":"Este botão representa o ícone de voltar, é aqui que você poderá sempre retornar à tela anterior.",
+               "alignLeftLeft": "menu_back",
+               "alignTopBottom": "menu_back",
+               "focus": "menu_back"
+            },
+            {
+               "title":"Relatório",
+               "text":"Este botão é para você acessar o relatório deste formulário. Aqui você poderá visualizar quantas pesquisas foram realizadas, o número restante de pesquisas que precisam ser preenchidos, aprovados e aqueles que requer a sua revisão.",
+               "condition": "user.isCoordinator",
+               "alignTopBottom": "form_logs_icon",
+               "alignRightRight": "form_logs_icon",
+               "focus": "form_logs_icon",
+               "align": "right",
+               "margin": [50, 20, 0, 0]
+            },
+            {
+               "title":"Transferência de Pesquisas",
+               "text":"Sempre que você precisar transferir uma ou mais pesquisas de um Pesquisador para outro Pesquisador, você utilizará este botão. Ao tocar neste botão, o aplicativo iniciará o passo-a-passo selecionar a quantidade de submissões que deseja transferir para outro Pesquisador.",
+               "condition": "false"
+            },
+            {
+               "title":"Procurar por uma pesquisa",
+               "text":"Para encontrar alguma pesquisa já realizada na listagem abaixo, você pode procurar escrevendo o nome da pesquisa.",
+               "alignTopBottom": "menubar_search",
+               "alignRightRight": "menubar_search",
+               "focus": "menubar_search",
+               "align": "right",
+               "margin": [50, 0, 0, 0]
+            },
+            {
+               "title":"Atualizar",
+               "text":"Ao clicar neste botão, o aplicativo irá verificar se existem novas atualizações pendentes para você.",
+               "alignTopBottom": "menubar_refresh",
+               "alignRightRight": "menubar_refresh",
+               "focus": "menubar_refresh",
+               "align": "right"
+            },
+            {
+               "title":"Botão de ajuda",
+               "text":"Sempre que este �cone de interrogação aparecer, significa que você poderá consultar a ajuda da tela onde você esta. Ao tocar no botão o aplicativo iniciará o guia de explicação, experimente!",
+               "condition": "false"
+            },
+            {
+               "title":"Central de Notificações",
+               "text":"Clicando neste sino, você poderá visualizar os alertas e informações importantes para você. Sempre que tiver uma ou mais notificações que você não leu, vai aparecer o número de notificações não lidas, basta tocar no sino para ler.",
+               "alignTopBottom": "notifications_button",
+               "alignRightRight": "notifications_button",
+               "focus": "notifications_button",
+               "align": "right"
+            },
+            {
+               "title":"Relatório",
+               "text":"Neste botão você pode consultar as estatísticas gerais do formulário selecionado. Você poderá visualizar quantas pesquisas foram realizadas, o número restante de pesquisas que precisam ser preenchidos, aprovados e aqueles que requer a sua revisão.",
+               "condition": "false"
+            },
+            {
+               "title":"Selecionar Pesquisador",
+               "text":"Você pode listar as pesquisas realizadas de uma determinada pessoa clicando neste botão.",
+               "condition": "user.isCoordinator",
+               "alignRightRight": "form_hint_selectuser",
+               "alignTopBottom": "form_hint_selectuser",
+               "focus": "form_hint_selectuser",
+               "align": "right",
+               "margin": [0, 20, 0, 0]
+            },
+            {
+               "title":"Abas de status",
+               "text":"Você poderá exibir apenas as pesquisas de seu interesse através do status, muito útil quando você tem muitas pesquisas realizadas.",
+               "condition": "user.isCoordinator",
+               "alignLeftLeft": "form_tabs_coordinator",
+               "alignBottomTop": "form_tabs_coordinator",
+               "focus": "form_tabs_coordinator",
+               "margin": [50, -20, 50, 0]
+            },
+            {
+               "title":"Abas de status",
+               "text":"Você poderá exibir apenas as pesquisas de seu interesse através do status, muito útil quando você tem muitas pesquisas realizadas.",
+               "condition": "!user.isCoordinator",
+               "alignLeftLeft": "form_tabs_user",
+               "alignBottomTop": "form_tabs_user",
+               "focus": "form_tabs_user",
+               "margin": [50, -20, 50, 0]
+            },
+            {
+               "title":"Listagem de pesquisas",
+               "text":"Aqui ficam todas as pesquisas realizadas por seus Pesquisadores. Você irá observar que cada Pesquisa vem acompanhada de um ícone que sinaliza o status atual do preenchimento.",
+               "alignLeftLeft": "form_tabcontent",
+               "alignBottomTop": "form_tabcontent",
+               "focus": "form_tabcontent",
+               "action": "setFakeSubmission",
+               "condition": "user.isCoordinator",
+               "margin": [50, -20, 50, 0]
+            },
+            {
+               "title":"Listagem de pesquisas",
+               "text":"Aqui ficam todas as pesquisas realizadas por você. Você irá observar que cada Pesquisa vem acompanhada de um ícone que sinaliza o status atual do preenchimento.",
+               "alignLeftLeft": "form_tabcontent",
+               "alignBottomTop": "form_tabcontent",
+               "focus": "form_tabcontent",
+               "action": "setFakeSubmission",
+               "condition": "!user.isCoordinator",
+               "margin": [50, -20, 50, 0]
+            }
+         ]
+      },
+      {
+         "activity":"SubmissionActivity",
+         "data":[
+            {
+               "title":"Apresentação",
+               "text":"Esta é a tela onde você poderá editar, aprovar e reprovar as submissões de seus Pesquisadores. Para entrar nesta tela, basta localizar o ícone de exclamação com o status: Formulário pendente de revisão na listagem das pesquisas.",
+               "center": "both",
+               "condition": "user.isCoordinator",
+               "margin": [50, 0, 50, 0]
+            },
+            {
+               "title":"Apresentação",
+               "text":"Esta é a tela onde você poderá preencher suas pesquisas. Para entrar nesta tela, basta tocar em um item na listagem das pesquisas ou criar uma nova.",
+               "center": "both",
+               "condition": "!user.isCoordinator",
+               "margin": [50, 0, 50, 0]
+            },
+            {
+               "title":"Solicitando uma correção",
+               "text":"É neste botão que você deve clicar quando quiser fazer uma correção. Ao clicar, será solicitado que você preencha o comentário sobre aquela correção. Este comentário será lido por seu Pesquisador.",
+               "alignRightRight": "form_input_baloon",
+               "alignBottomTop": "form_input_baloon",
+               "focus": "form_input_baloon",
+               "align": "right",
+               "condition": "user.isCoordinator",
+               "margin": [50, 0, 0, 0]
+            },
+            {
+               "title":"Solicitar correção ao pesquisador",
+               "text":"Quando você terminar de fazer as solicitações de correção ao Pesquisador, você deve clicar neste botão para que os seus comentários sejam enviados.",
+               "alignLeftLeft": "submission_hint_requestcorrection",
+               "alignTopBottom": "submission_hint_requestcorrection",
+               "focus": "submission_hint_requestcorrection",
+               "condition": "user.isCoordinator",
+               "margin": [0, 20, 50, 0]
+            },
+            {
+               "title":"Reprovar formulário",
+               "text":"Se por algum motivo for necessário você reprovar o formulário como um todo, você deve clicar neste botão. Ao fazer isto, a pesquisa retorna ao Pesquisador de origem que ficou responsável pelo preenchimento.",
+               "alignLeftLeft": "submission_hint_reprove",
+               "alignTopBottom": "submission_hint_reprove",
+               "focus": "submission_hint_reprove",
+               "condition": "user.isCoordinator",
+               "margin": [0, 20, 50, 0]
+            },
+            {
+               "title":"Aprovar formulário",
+               "text":"Caso não tenha nenhuma correção ou as correções foram feitas pelo seu Pesquisador, você pode aprovar a correção",
+               "alignRightRight": "submission_hint_approve",
+               "alignTopBottom": "submission_hint_approve",
+               "focus": "submission_hint_approve",
+               "align": "right",
+               "condition": "user.isCoordinator",
+               "margin": [0, 20, 0, 0]
+            },
+            {
+               "title":"Editando um comentário",
+               "text":"Neste botão você pode voltar ao seu comentário para fazer alguma correção no seu texto.",
+               "action": "addFakeReviewData",
+               "alignRightRight": "form_fill_editcomment",
+               "alignBottomTop": "form_fill_editcomment",
+               "focus": "form_fill_editcomment",
+               "align": "right",
+               "condition": "user.isCoordinator"
+            },
+            {
+               "title":"Excluindo um comentário",
+               "text":"Clicando na lixeira, você removerá o seu comentário e ele não será enviado ao Pesquisador.",
+               "alignRightRight": "form_fill_removecomment",
+               "alignBottomTop": "form_fill_removecomment",
+               "focus": "form_fill_removecomment",
+               "align": "right",
+               "condition": "user.isCoordinator"
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e5e5e5"
+    android:paddingBottom="10dp">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+        android:background="#cccccc"
+        android:padding="1dp"
+            android:id="@+id/frameLayout"
+            android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:visibility="visible"
+                android:id="@+id/logs_myforms">
+
+            <com.lfdb.parapesquisa.ui.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lipsum"
+                    android:id="@+id/logs_row_label"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="70dp"
+                    android:textSize="17dp"
+                    android:textColor="#333"
+                    android:paddingTop="1dp"
+                ntxdev:font_weight="300"/>
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/relatorio_icon2"
+                    android:layout_marginLeft="20dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/bt_seta" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

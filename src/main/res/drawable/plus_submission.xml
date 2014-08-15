@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval" android:innerRadius="33dp" android:thickness="0dp">
+            <solid android:color="#cccccc" />
+            <size android:width="66dp" android:height="66dp" />
+        </shape>
+    </item>
+
+    <item android:left="1dp" android:right="1dp" android:top="1dp" android:bottom="1dp">
+        <shape android:shape="oval" android:thickness="0dp" android:innerRadius="12dp" android:innerRadiusRatio="10">
+            <solid android:color="#f7f7f7" />
+        </shape>
+    </item>
+
+    <item android:left="5dp" android:right="5dp" android:top="5dp" android:bottom="5dp">
+        <shape android:shape="oval" android:innerRadius="28dp" android:thickness="0dp">
+            <solid android:color="#98ce00" />
+        </shape>
+    </item>
+
+    <item android:left="31dp" android:right="31dp" android:top="20dp" android:bottom="20dp">
+        <shape android:shape="rectangle" android:useLevel="true" android:thickness="0dp">
+            <solid android:color="#fff" />
+            <corners android:radius="1dp" />
+        </shape>
+    </item>
+
+    <item android:left="20dp" android:right="20dp" android:top="31dp" android:bottom="31dp">
+        <shape android:shape="rectangle" android:useLevel="true" android:thickness="0dp">
+            <solid android:color="#fff" />
+            <corners android:radius="1dp" />
+        </shape>
+    </item>
+</layer-list>

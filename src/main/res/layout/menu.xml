@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="215dp"
+              android:layout_height="match_parent"
+              android:background="#4c4c4c"
+              android:clickable="true"
+    android:id="@+id/logs_text_users">
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#666">
+    </FrameLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:id="@+id/menu_avatar"
+                android:layout_marginLeft="8dp"
+            android:layout_alignParentLeft="true"
+                android:background="#999"
+            android:src="@drawable/menu_icon_user"
+            android:layout_centerVertical="true" />
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lipsum"
+                android:id="@+id/menu_name"
+                android:layout_alignTop="@+id/menu_avatar"
+                android:layout_toRightOf="@+id/menu_avatar"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="6dp"
+                android:textColor="#fff"
+                android:textSize="15dp"
+            android:layout_marginRight="11dp" />
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lipsum"
+                android:id="@+id/menu_server"
+                android:layout_below="@+id/menu_name"
+                android:layout_alignLeft="@+id/menu_name"
+                android:textColor="#ccc"
+                android:textSize="12dp"
+            ntxdev:font_weight="300"/>
+    </RelativeLayout>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#666"
+            android:id="@+id/frameLayout"
+        android:layout_marginTop="8dp" />
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="59dp"
+            android:id="@+id/menu_forms"
+            android:clickable="true"
+            android:onClick="menuClick">
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_myforms"
+                android:id="@+id/textView3"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="65dp"
+                android:textColor="#fff"/>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/menu_icon_formulario"
+                android:layout_marginLeft="25dp"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#666"
+            android:id="@+id/frameLayout2"/>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="59dp"
+            android:id="@+id/menu_about"
+            android:clickable="true"
+            android:onClick="menuClick">
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_about"
+                android:id="@+id/textView4"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="65dp"
+                android:textColor="#fff"/>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/menu_icon_sobre"
+                android:layout_marginLeft="25dp"/>
+    </RelativeLayout>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#666"
+            android:id="@+id/frameLayout3"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="59dp"
+        android:id="@+id/menu_help"
+        android:clickable="true"
+        android:onClick="menuClick"
+        android:visibility="visible">
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_help"
+            android:id="@+id/textView"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="65dp"
+            android:textColor="#fff" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/menu_icon_sobre"
+            android:layout_marginLeft="25dp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#666"
+        android:id="@+id/frameLayout5"
+        android:visibility="visible" />
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="59dp"
+            android:id="@+id/menu_logout"
+            android:clickable="true"
+            android:onClick="menuClick">
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_logout"
+                android:id="@+id/textView5"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="65dp"
+                android:textColor="#fff"/>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/menu_icon_sair"
+                android:layout_marginLeft="27dp"/>
+    </RelativeLayout>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#666"
+            android:id="@+id/frameLayout4"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/version"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ccc"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</LinearLayout>

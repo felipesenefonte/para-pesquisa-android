@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/activity_root">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#333333"
+            android:layout_weight="0">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#555"
+                android:layout_margin="10dp"
+                android:id="@+id/header_menu"
+                android:clickable="true"
+                android:onClick="showMenu">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/header_icon_menu"
+                    android:scaleType="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="9dp"/>
+
+            <com.lfdb.parapesquisa.ui.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MENU"
+                    android:id="@+id/textView3"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_marginRight="10dp"
+                    android:textSize="13dp"
+                    android:layout_marginTop="1dp"
+                    android:textIsSelectable="false"
+                ntxdev:font_weight="800"/>
+        </LinearLayout>
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/about"
+                android:id="@+id/textView"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="13dp"
+                android:textSize="18dp"
+            ntxdev:font_weight="300"/>
+
+        <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/menubar"/>
+    </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/about_scroll"
+            android:layout_weight="0"
+            android:background="#fff">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/about_table">
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+        android:id="@+id/forms_menu"
+            android:onClick="hideMenu"
+            android:clickable="true"
+        android:layout_marginTop="60dp"
+        android:longClickable="false"
+        android:visibility="gone">
+
+        <include
+                android:layout_width="215dp"
+                android:layout_height="match_parent"
+                layout="@layout/menu"
+            android:id="@+id/forms_menu_list" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="215dp"
+            android:background="#000"
+            android:alpha=".5"
+            android:id="@+id/forms_menu_overlay"></FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

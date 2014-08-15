@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+    android:background="#fff">
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#f7f7f7"
+    android:layout_marginBottom="8dp">
+
+    <com.lfdb.parapesquisa.ui.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Casa"
+        android:id="@+id/dragitem_label"
+        android:layout_centerVertical="true"
+        android:textSize="14dp"
+        android:textColor="#000"
+        android:layout_marginLeft="20dp"
+        ntxdev:font_weight="600"
+        />
+
+    <ImageView
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:id="@+id/dragitem_down"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/drag_seta_baixo"
+        android:scaleType="center" />
+
+    <ImageView
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:id="@+id/dragitem_up"
+        android:layout_alignParentTop="false"
+        android:layout_toLeftOf="@+id/dragitem_down"
+        android:src="@drawable/drag_seta_cima"
+        android:layout_alignParentBottom="false"
+        android:layout_centerVertical="true"
+        android:scaleType="center" />
+
+</RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/activity_root"
+              android:clickable="false">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#333333"
+            android:layout_weight="0"
+            android:id="@+id/linearLayout"
+            android:layout_gravity="left|center_vertical">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/menu_header"
+                    android:visibility="visible"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="53dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="6dp"
+                    android:src="@drawable/header_bt_voltar"
+                    android:scaleType="center"
+                    android:clickable="true"
+                    android:onClick="formBack"
+                    android:id="@+id/menu_back" />
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                    android:onClick="showLongName"
+                    android:clickable="true">
+
+                    <com.lfdb.parapesquisa.ui.FontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/lipsum"
+                        android:id="@+id/form_title"
+                        android:textColor="#fff"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="18dp"
+                        android:textIsSelectable="false"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        ntxdev:font_weight="300"/>
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:id="@+id/menu_search"
+                    android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:padding="1dp"
+                    android:background="#545454"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/menu_search_text"
+                            android:background="#333"
+                            android:textSize="16dp"
+                        android:textColor="#fff"
+                            android:textColorHint="#ccc"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                        android:layout_weight="1"
+                        android:inputType="text|textNoSuggestions" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/menu_search_clear"
+                        android:src="@drawable/bt_fechar_lightbox"
+                        android:scaleType="center"
+                        android:background="#333"
+                        android:clickable="true" />
+                </LinearLayout>
+
+                <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="#545454"
+                        android:layout_weight="0"
+                        android:clickable="true"
+                        android:id="@+id/menu_search_cancel">
+
+                    <com.lfdb.parapesquisa.ui.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/search_cancel"
+                            android:id="@+id/textView6"
+                            android:textSize="14dp"
+                            android:textColor="#fff"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/menu_icons"
+                android:layout_weight="1">
+
+                <include
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/menubar"
+                        />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:background="#ff9b00"
+                android:id="@+id/alert_form">
+
+            <com.lfdb.parapesquisa.ui.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/form_warning_pendingsubmission"
+                    android:id="@+id/textView2"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="24dp"
+                    android:textColor="#fff"
+                    android:textSize="15dp"/>
+
+            <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="1dp"
+                    android:background="#ffc366"
+                    android:id="@+id/frameLayout2"
+                android:onClick="stopPending">
+
+                <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="#ff9b00"
+                        android:padding="10dp">
+
+                    <com.lfdb.parapesquisa.ui.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/form_stop"
+                            android:id="@+id/textView3"
+                            android:layout_gravity="center"
+                            android:textColor="#fff"/>
+                </FrameLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_marginRight="10dp"
+                    android:padding="1dp"
+                    android:background="#ffc366"
+                    android:id="@+id/frameLayout"
+                    android:layout_alignParentTop="false"
+                    android:layout_toLeftOf="@+id/frameLayout2"
+                    android:layout_alignTop="@+id/frameLayout2"
+                    android:clickable="true"
+                    android:onClick="continuePending">
+
+                <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="#ff9b00"
+                        android:padding="10dp"
+                        android:clickable="false">
+
+                    <com.lfdb.parapesquisa.ui.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/form_continue"
+                            android:id="@+id/textView5"
+                            android:layout_gravity="center"
+                            android:textColor="#fff"/>
+
+                </FrameLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#f7f7f7"
+            android:id="@+id/form_header_user">
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lipsum"
+                android:id="@+id/form_description"
+                android:layout_gravity="left|top"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="25dp"
+                android:textSize="13dp"
+                android:typeface="sans"
+                android:textColor="#999"
+            android:layout_toLeftOf="@+id/form_newsubmission_container" />
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lipsum"
+                android:id="@+id/form_deadline"
+                android:layout_below="@+id/form_description"
+                android:layout_alignLeft="@+id/form_description"
+                android:textSize="14dp"
+                android:layout_marginTop="6dp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:textColor="#000"
+            android:layout_toLeftOf="@+id/form_newsubmission_container"
+            android:clickable="false"
+            ntxdev:font_weight="700"/>
+
+        <view
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                class="com.lfdb.parapesquisa.ui.RoundIndicator"
+                android:id="@+id/form_indicator"
+                android:layout_alignLeft="@+id/form_deadline"
+                android:layout_marginLeft="-2dp"
+                ntxdev:color="#343434"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/form_deadline"
+            android:visibility="visible" />
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remaining_submissions"
+                android:id="@+id/form_remaining"
+                android:layout_alignTop="@+id/form_indicator"
+                android:layout_toRightOf="@+id/form_indicator"
+                android:layout_marginTop="12dp"
+                android:textSize="13dp"
+                android:textColor="#333"
+                android:layout_marginLeft="20dp"
+            android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/form_newsubmission_container"
+                android:layout_marginRight="5dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/bt_novopreenchimento"
+                    android:layout_alignParentRight="false"
+                    android:onClick="newSubmission"
+                    android:clickable="true"
+                    android:layout_centerHorizontal="true" />
+
+                <com.lfdb.parapesquisa.ui.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_submission"
+                    android:id="@+id/textView"
+                    android:textSize="13dp"
+                    android:textAlignment="center"
+                android:layout_alignParentRight="false"
+                    android:textColor="#676767"
+                android:layout_alignParentEnd="false"
+                android:layout_below="@+id/imageView"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_below="@+id/form_indicator"></FrameLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#f7f7f7"
+                android:id="@+id/form_header_coordinator"
+                android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameanddesc"
+                android:paddingBottom="10dp">
+
+                <com.lfdb.parapesquisa.ui.FontTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lipsum"
+                        android:id="@+id/form_description"
+                        android:layout_gravity="left|top"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="13dp"
+                        android:typeface="sans"
+                        android:textColor="#999"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/menu_back"
+                    android:layout_marginRight="20dp" />
+
+                <com.lfdb.parapesquisa.ui.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lipsum"
+                        android:id="@+id/form_deadline"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:typeface="sans"
+                        android:textColor="#000"
+                        android:layout_below="@+id/form_description"
+                        android:layout_alignParentLeft="false"
+                        android:layout_marginTop="6dp"
+                        android:layout_alignLeft="@+id/form_description"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/form_logs_icon"
+                        android:src="@drawable/bt_relatorio"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="false"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignParentBottom="false"
+                        android:layout_toLeftOf="@+id/textView7"
+                    android:clickable="true"
+                    android:onClick="showLogs"
+                    android:layout_centerVertical="true" />
+
+                <com.lfdb.parapesquisa.ui.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/log"
+                        android:id="@+id/textView7"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/menu_back"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#666"
+                        android:textSize="12dp"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="76dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentLeft="true"
+                    android:background="#999"
+                android:layout_below="@+id/nameanddesc">
+
+                <com.lfdb.parapesquisa.ui.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lipsum"
+                        android:id="@+id/form_user"
+                        android:textColor="#fff"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18dp"/>
+
+                <com.lfdb.parapesquisa.ui.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lipsum"
+                        android:id="@+id/form_remaining"
+                        android:layout_below="@+id/form_user"
+                        android:layout_alignLeft="@+id/form_user"
+                        android:textColor="#fff"
+                        android:textSize="13dp"
+                        android:layout_marginTop="3dp"/>
+
+                <FrameLayout
+                        android:layout_width="300dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp">
+
+                    <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:background="#cccccc"
+                            android:padding="1dp"
+                        android:clickable="true"
+                        android:onClick="selectUser"
+                        android:measureAllChildren="false"
+                        android:id="@+id/form_hint_selectuser">
+
+                        <com.lfdb.parapesquisa.ui.FontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/select_user"
+                                android:id="@+id/textView8"
+                                android:background="#999"
+                                android:textSize="13dp"
+                                android:textColor="#fff"
+                                android:paddingTop="9dp"
+                                android:paddingRight="9dp"
+                                android:paddingBottom="9dp"
+                                android:paddingLeft="40dp"
+                            ntxdev:font_weight="700"/>
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/imageView3"
+                                android:src="@drawable/menu_icon_pesquisadores_selecionado"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"/>
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:id="@+id/form_tabs_user"
+            android:orientation="horizontal"
+            android:background="#fff">
+
+        <view
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                class="com.lfdb.parapesquisa.ui.Tab"
+                android:id="@+id/form_tab_all"
+                ntxdev:text="@string/tab_all"
+                android:layout_weight="1"
+                android:onClick="filterSubmissions"/>
+
+        <view
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                class="com.lfdb.parapesquisa.ui.Tab"
+                android:id="@+id/form_tab_correct"
+                android:layout_weight="1"
+                ntxdev:text="@string/tab_rejected"
+                android:onClick="filterSubmissions"/>
+
+        <view
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                class="com.lfdb.parapesquisa.ui.Tab"
+                android:id="@+id/form_tab_rescheduled"
+                android:layout_weight="1"
+                ntxdev:text="@string/tab_rescheduled"
+                android:onClick="filterSubmissions"/>
+
+        <view
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                class="com.lfdb.parapesquisa.ui.Tab"
+                android:id="@+id/form_tab_cancelled"
+                android:layout_weight="1"
+                ntxdev:text="@string/tab_cancelled"
+                android:onClick="filterSubmissions"/>
+
+        <view
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                class="com.lfdb.parapesquisa.ui.Tab"
+                android:id="@+id/form_tab_sent"
+                android:layout_weight="1"
+                ntxdev:text="@string/tab_sent"
+                android:onClick="filterSubmissions"/>
+
+        <view
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                class="com.lfdb.parapesquisa.ui.Tab"
+                android:id="@+id/form_tab_approved"
+                android:layout_weight="1"
+                ntxdev:text="@string/tab_approved"
+                android:onClick="filterSubmissions"/>
+    </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="#fff"
+                android:id="@+id/form_tabs_coordinator">
+
+            <view
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    class="com.lfdb.parapesquisa.ui.Tab"
+                    android:id="@+id/form_tab_received"
+                    android:layout_weight="1"
+                    ntxdev:text="Recebidos"
+                    android:onClick="filterSubmissions"
+                    android:focusableInTouchMode="false"/>
+
+            <view
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    class="com.lfdb.parapesquisa.ui.Tab"
+                    android:id="@+id/form_tab_toreview"
+                    android:layout_weight="1"
+                    ntxdev:text="Para revisar"
+                    android:onClick="filterSubmissions"/>
+
+            <view
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    class="com.lfdb.parapesquisa.ui.Tab"
+                    android:id="@+id/form_tab_crescheduled"
+                    android:layout_weight="1"
+                    ntxdev:text="Reagendados"
+                    android:onClick="filterSubmissions"/>
+
+            <view
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    class="com.lfdb.parapesquisa.ui.Tab"
+                    android:id="@+id/form_tab_ccancelled"
+                    android:layout_weight="1"
+                    ntxdev:text="Cancelados"
+                    android:onClick="filterSubmissions"/>
+
+            <view
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    class="com.lfdb.parapesquisa.ui.Tab"
+                    android:id="@+id/form_tab_waitingforcorrection"
+                    android:layout_weight="1"
+                    ntxdev:text="Ag. correção"
+                    android:onClick="filterSubmissions"/>
+
+            <view
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    class="com.lfdb.parapesquisa.ui.Tab"
+                    android:id="@+id/form_tab_capproved"
+                    android:layout_weight="1"
+                    ntxdev:text="Aprovados"
+                    android:onClick="filterSubmissions"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/form_tabcontent"
+            android:background="#fff">
+
+        <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+            android:id="@+id/form_scroll"
+            android:layout_marginBottom="50dp">
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/form_table"
+                    android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="50dp"
+                android:clickable="false"
+                android:background="#ddd"></FrameLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:id="@+id/form_navigation"
+                android:visibility="visible"
+                android:layout_gravity="bottom"
+                android:clickable="true">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/prev_page"
+                    android:onClick="pagination_prevPage"
+                    android:clickable="true"
+                    android:background="#fff"
+                    android:visibility="visible">
+
+                    <com.lfdb.parapesquisa.ui.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prev_page"
+                        android:id="@+id/textView3"
+                        android:layout_weight="1"
+                        android:textColor="#aaaaaa"
+                        android:singleLine="true"
+                        android:phoneNumber="false"
+                        android:password="false"
+                        android:layout_gravity="center"
+                        ntxdev:font_weight="300"/>
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#555"
+                        android:visibility="gone"
+                        android:id="@+id/click_mask"></FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="#ddd">
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/next_page"
+                    android:onClick="pagination_nextPage"
+                    android:clickable="true"
+                    android:background="#fff">
+
+                    <com.lfdb.parapesquisa.ui.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/next_page"
+                        android:id="@+id/submission_next_text"
+                        android:layout_weight="1"
+                        android:textColor="#aaa"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        ntxdev:font_weight="300"/>
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#555"
+                        android:alpha=".5"
+                        android:id="@+id/click_mask"
+                        android:visibility="gone"></FrameLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="62dp"
+        android:id="@+id/longname_container"
+        android:onClick="hideLongName"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView4"
+            android:src="@drawable/balao_notificacoes_bico"
+            android:layout_marginLeft="70dp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#333"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp">
+
+            <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lipsum"
+                android:id="@+id/longname_text"
+                android:textColor="#fff"
+                android:textSize="13dp"
+                android:padding="15dp"
+                android:singleLine="false" />
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

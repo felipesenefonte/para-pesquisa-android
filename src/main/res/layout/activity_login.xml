@@ -1,0 +1,353 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="#333333"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:id="@+id/activity_root">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/container_tim">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/login_container">
+
+                <RelativeLayout
+                    android:layout_width="318dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/center">
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/center_before"></FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/login_logo"
+                        android:layout_below="@+id/center_before">
+
+                        <com.lfdb.parapesquisa.ui.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PARA"
+                            android:id="@+id/textView6"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#878787"
+                            android:textSize="40dp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            android:layout_alignBottom="@+id/login_logo"
+                            ntxdev:font_weight="300"/>
+                        <com.lfdb.parapesquisa.ui.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PESQUISA"
+                            android:id="@+id/textView7"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#b8b8b8"
+                            android:textSize="40dp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            android:layout_alignBottom="@+id/login_logo"
+                            ntxdev:font_weight="700"
+                            android:layout_marginLeft="5dp" />
+                    </LinearLayout>
+
+                    <com.lfdb.parapesquisa.ui.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/version"
+                        android:id="@+id/login_version"
+                        android:textColor="#ccc"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        ntxdev:font_weight="300"
+                        android:layout_below="@+id/login_logo" />
+
+                    <LinearLayout
+                            android:layout_width="318dp"
+                            android:layout_height="wrap_content"
+                        android:id="@+id/relativeLayout"
+                            android:orientation="vertical"
+                            android:background="#666"
+                        android:layout_below="@+id/login_version"
+                        android:layout_marginTop="30dp">
+
+                        <FrameLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="#666"
+                            android:visibility="gone">
+
+                            <com.lfdb.parapesquisa.ui.FontTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:text="Idioma"
+                                    android:id="@+id/textView4"
+                                    android:textSize="18dp"
+                                    android:textColor="#fff"
+                                    android:textIsSelectable="false"
+                                    android:layout_margin="1dp"
+                                    android:paddingLeft="17dp"
+                                    android:paddingTop="15dp"
+                                    android:layout_marginRight="10dp"
+                                    ntxdev:font_weight="300"
+                                    />
+
+                            <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageView3"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:src="@drawable/telalogin_icon_idioma"
+                                    android:layout_marginRight="15dp"
+                                    android:scaleType="center"/>
+                        </FrameLayout>
+
+                        <FrameLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="21dp"
+                                android:background="#333"
+                            android:visibility="gone">
+                        </FrameLayout>
+
+                        <EditText
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/login_server"
+                                android:layout_alignParentTop="true"
+                                android:height="58dp"
+                                android:textSize="18dp"
+                                style="@style/LoginTheme"
+                                android:layout_margin="1dp"
+                                android:background="#333333"
+                                android:paddingLeft="17dp"
+                                android:paddingRight="17dp"
+                                android:textColor="#fff"
+                                android:hint="@string/login_server"
+                                android:textColorHint="#999"
+                                android:singleLine="true"
+                            android:inputType="textNoSuggestions" />
+
+                        <FrameLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="21dp"
+                                android:background="#333333">
+                        </FrameLayout>
+
+                        <EditText
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/login_username"
+                                android:layout_alignParentEnd="false"
+                                android:layout_alignParentStart="false"
+                                style="@style/LoginTheme"
+                                android:layout_below="@+id/login_buttoncontainer"
+                                android:layout_alignParentLeft="true"
+                                android:background="#333"
+                                android:layout_margin="1dp"
+                                android:textSize="18dp"
+                                android:paddingLeft="17dp"
+                                android:paddingRight="17dp"
+                                android:textColor="#fff"
+                                android:hint="@string/login_username"
+                                android:textColorHint="#999"
+                                android:singleLine="true"
+                            android:inputType="textNoSuggestions" />
+
+                        <FrameLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="21dp"
+                                android:background="#333">
+                        </FrameLayout>
+
+                        <EditText
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:inputType="textPassword"
+                                android:ems="10"
+                                android:id="@+id/login_password"
+                                style="@style/LoginTheme"
+                                android:layout_below="@+id/login_username"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="true"
+                                android:background="#333"
+                                android:layout_margin="1dp"
+                                android:paddingLeft="17dp"
+                                android:paddingRight="17dp"
+                                android:textColor="#fff"
+                                android:hint="@string/login_password"
+                                android:textSize="18dp"
+                                android:textColorHint="#999"
+                                android:singleLine="true" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                            android:layout_width="191dp"
+                            android:layout_height="53dp"
+                            android:background="#666666"
+                            android:clickable="true"
+                            android:onClick="onLogin"
+                            android:id="@+id/login_buttoncontainer"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/relativeLayout"
+                        android:layout_marginTop="36dp">
+
+                        <FrameLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:layout_margin="1dp"
+                                android:background="#5b5b5b">
+
+                            <com.lfdb.parapesquisa.ui.FontTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/login_button"
+                                    android:id="@+id/textView"
+                                    android:layout_gravity="center"
+                                    android:textColor="#fff"
+                                    android:textSize="18dp"/>
+                        </FrameLayout>
+                    </FrameLayout>
+
+                    <ProgressBar
+                            style="?android:attr/progressBarStyleLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/login_progress"
+                        android:layout_centerHorizontal="true"
+                            android:visibility="gone"
+                            android:indeterminate="true"
+                        android:layout_below="@+id/login_buttoncontainer"
+                        android:layout_marginTop="20dp" />
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="170dp"
+                        android:layout_below="@+id/login_progress"></FrameLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/login_error_server"
+                    android:layout_alignTop="@+id/center"
+                    android:layout_toRightOf="@+id/center"
+                    android:src="@drawable/icon_erro_preenchimento_campo"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="176dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/login_error_username"
+                    android:layout_marginTop="53dp"
+                    android:src="@drawable/icon_erro_preenchimento_campo"
+                    android:layout_below="@+id/login_error_server"
+                    android:layout_alignLeft="@+id/login_error_server" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/login_error_password"
+                    android:layout_below="@+id/login_error_username"
+                    android:layout_alignLeft="@+id/login_error_username"
+                    android:src="@drawable/icon_erro_preenchimento_campo"
+                    android:layout_marginTop="53dp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/container_tim"
+                    android:background="#dfdfdf"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <com.lfdb.parapesquisa.ui.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/login_text1"
+                            android:id="@+id/textView2"
+                            android:textColor="#666"
+                            android:textSize="13dp"
+                            android:singleLine="false"
+                            android:layout_alignParentBottom="false"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="15dp"
+                        android:layout_below="@+id/login_buttoncontainer"
+                        ntxdev:font_weight="300"
+                        android:textStyle="italic" />
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView2"
+                            android:src="@drawable/logo_tim"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="20dp"
+                        android:layout_below="@+id/textView2" />
+
+                    <com.lfdb.parapesquisa.ui.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/login_text2"
+                            android:id="@+id/textView3"
+                            android:textColor="#666"
+                            android:textSize="13dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="false"
+                            android:layout_marginBottom="15dp"
+                        android:layout_below="@+id/imageView2"
+                        ntxdev:font_weight="300"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#dfdfdf"
+        android:id="@+id/async_loading"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:id="@+id/textView5"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp" />
+    </FrameLayout>
+
+</RelativeLayout>

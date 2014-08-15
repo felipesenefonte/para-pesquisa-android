@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TabControl">
+        <attr name="content" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Tab">
+        <attr name="text" format="string" />
+        <attr name="target" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundIndicator">
+        <attr name="color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="AppTheme" />
+    <declare-styleable name="AppBaseTheme" />
+
+    <declare-styleable name="FontTextView">
+        <attr name="font_weight" format="integer" />
+    </declare-styleable>
+</resources>

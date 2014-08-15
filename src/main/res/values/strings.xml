@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="version">1.32</string>
+    <!--<string name="versionCode">25</string>-->
+
+    <string name="loading">Carregando...</string>
+    <string name="app_name">Para Pesquisa</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="lipsum">Lorem Ipsum</string>
+    <string name="cancel">Cancelar</string>
+    <string name="ok">OK</string>
+
+    <string name="submission_title">Submissão #{number}</string>
+    <string name="submission_state_notsent">Em andamento</string>
+    <string name="submission_state_waitingforsync">Aguardando sincronização</string>
+    <string name="submission_state_waitingforapproval">Aguardando aprovação</string>
+    <string name="submission_state_rejected">Formulário pendente de correção</string>
+    <string name="submission_state_approved">Formulário aprovado</string>
+    <string name="submission_state_cancelled">Cancelado ({reason})</string>
+    <string name="submission_state_rescheduled">Reagendado ({date})</string>
+    <string name="submission_state_reproved">Reprovado</string>
+
+    <string name="submission_state_coordinator_notsent">Em andamento</string>
+    <string name="submission_state_coordinator_waitingforsync">Aguardando sincronização</string>
+    <string name="submission_state_coordinator_waitingforapproval">Formulário pendente de revisão</string>
+    <string name="submission_state_coordinator_rejected">Aguardando correção do pesquisador</string>
+    <string name="submission_state_coordinator_approved">Formulário aprovado</string>
+    <string name="submission_state_coordinator_cancelled">Cancelado ({reason})</string>
+    <string name="submission_state_coordinator_reproved">Reprovado</string>
+
+    <!-- LOGIN -->
+    <string name="login_language">Idioma</string>
+    <string name="login_server">Servidor</string>
+    <string name="login_username">Usuário</string>
+    <string name="login_password">Senha</string>
+    <string name="login_button">Acessar</string>
+    <string name="login_text1">Powered by</string>
+    <string name="login_text2">Este aplicativo possui uma licença livre.</string>
+
+    <!-- INPUTS -->
+    <string name="input_age">anos</string>
+    <string name="input_day">DD</string>
+    <string name="input_month">MM</string>
+    <string name="input_year">AAAA</string>
+
+    <!-- NOTIFICATION PANEL -->
+    <string name="notifications_close">Fechar</string>
+    <string name="notifications_viewall">Ver todas</string>
+
+    <!-- FORM -->
+    <string name="my_forms">Minhas Pesquisas</string>
+    <string name="global_log">Relatório Global</string>
+    <string name="form_allusers">Todos os pesquisadores</string>
+    <string name="form_deadline">De {from} a {to} - Faltam {remaining} dias para o término</string>
+    <string name="form_deadline_singular">De {from} a {to} - Falta {remaining} dia para o término</string>
+    <string name="form_concurrentsubmission">Você não pode iniciar uma nova pesquisa porque já possui uma pesquisa em andamento. Você deve reagendar ou cancelar a pesquisa tocando no botão PARAR dentro do formulário.</string>
+    <string name="search_cancel">CANCELAR</string>
+    <string name="general_log">Relatório Geral</string>
+    <string name="log_forms">Formulários atribuídos a você</string>
+    <string name="log_users_sing">Pesquisador sob sua responsabilidade</string>
+    <string name="log_users">Pesquisadores sob sua responsabilidade</string>
+    <string name="log_days">Dias para o término</string>
+    <string name="log_submissions_total">Total a serem feitas</string>
+    <string name="log_submissions_remaining">Faltam ser preenchidas</string>
+    <string name="log_submissions_approved">Aprovadas</string>
+    <string name="log_submission_waiting">Para revisar, aguardando correção e em andamento (reagendadas)</string>
+    <string name="form_noremainingsubmissions">Não há mais pesquisas disponíveis no momento. A partir de agora não será mais possível preencher novos questionários até que o responsável libere mais pesquisas para você.</string>
+
+    <!-- FILL FORM -->
+    <string name="request_correction">Solicitar correção ao pesquisador</string>
+    <string name="reject_form">Reprovar formulário</string>
+    <string name="approve_form">Aprovar formulário</string>
+    <string name="fillform_viewmode">Modo Visualização</string>
+    <string name="fillform_correctionmode">Modo Correção</string>
+    <string name="fillform_viewall">Ver Todas</string>
+    <string name="stop">Parar</string>
+    <string name="prev_page">Voltar</string>
+    <string name="next_page">Avançar</string>
+    <string name="last_page">Enviar</string>
+    <string name="submission_send">Enviar</string>
+    <string name="fillform_private">Este campo é privado, ele deve ser preenchido pela pessoa que está sendo pesquisada. Dê o tablet para a pessoa preencher este item e peça para ela clicar no botão Confirmar.</string>
+    <string name="fillform_private_confirm">Confirmar</string>
+    <string name="fillform_private_notext">Para confirmar este campo é necessário escrever algum texto.</string>
+    <string name="fillform_sentby">Enviado por {name} em {date}</string>
+    <string name="fillform_reviewedby">Revisado por {name} em {date}</string>
+    <string name="reject_confirm">Você tem certeza de que deseja reprovar este formulário? Ao reprovar o formulário, será solicitado que o Pesquisador refaça todo o formulário.</string>
+
+    <!-- FORM -->
+    <string name="form_warning_pendingsubmission">Você possui uma pesquisa em andamento</string>
+    <string name="form_continue">Continuar</string>
+    <string name="form_stop">Parar</string>
+    <string name="remaining_submissions">pesquisas não iniciadas</string>
+    <string name="of">de</string>
+    <string name="new_submission">Nova pesquisa</string>
+    <string name="log">Relatório</string>
+    <string name="select_user">Selecionar Pesquisador</string>
+    <string name="tab_all">Todos</string>
+    <string name="tab_rejected">Para corrigir</string>
+    <string name="tab_notsent">Em andamento</string>
+    <string name="tab_rescheduled">Reagendados</string>
+    <string name="tab_cancelled">Cancelados</string>
+    <string name="tab_sent">Aguard aprov</string>
+    <string name="tab_approved">Aprovados</string>
+    <string name="tab_received">Recebidos</string>
+    <string name="tab_toreview">Para revisar</string>
+    <string name="tab_cnotsent">Em andamento</string>
+    <string name="tab_ccancelled">Cancelados</string>
+    <string name="tab_waitingforcorrection">Ag correção</string>
+    <string name="tab_capproved">Aprovados</string>
+
+    <!-- MENU -->
+    <string name="menu_myforms">Minhas Pesquisas</string>
+    <string name="menu_about">Sobre</string>
+    <string name="menu_logout">Sair</string>
+    <string name="menu_help">Ajuda</string>
+
+    <string name="about">Sobre</string>
+
+    <string name="validation_range_number">O valor deve ser maior que {min} e menor que {max}</string>
+    <string name="validation_range_text">O valor deve ser ter entre {min} e {max} caracteres</string>
+    <string name="validation_required">Este campo deve ser preenchido</string>
+
+    <!-- NOTIFICATIONS -->
+    <string name="notification_description_sent">Enviado com sucesso</string>
+    <string name="notification_description_cancelled_maxreschedules">Pesquisa cancelada porque alcançou o número máximo de tentativas de reagendamento</string>
+    <string name="notification_description_rescheduled">Pesquisa reagendada com sucesso para o dia {date}</string>
+    <string name="notification_description_cancelled">Pesquisa cancelada ({reason}) por você</string>
+    <string name="notification_description_startchange">A data de início do formulário foi alterada para {date}</string>
+    <string name="notification_description_endchange">A data de fim do formulário foi alterada para {date}</string>
+    <string name="notification_description_syncerror">Erro ao sincronizar com o servidor. Verifique se o tablet está conectado à internet</string>
+    <string name="notification_description_coordinator_sentforcorrection">Pesquisa enviada para correção</string>
+    <string name="notification_description_coordinator_approved">Pesquisa aprovada com sucesso</string>
+    <string name="notification_description_coordinator_reproved">Pesquisa reprovada com sucesso</string>
+    <string name="notification_description_coordinator_waitingforcorrection">{user} concluiu a pesquisa. Aguardando para correção</string>
+    <string name="notification_description_coordinator_rescheduled">Pesquisador reagendou para {date}. Motivo: {reason}</string>
+    <string name="notification_description_coordinator_cancelled_maxreschedules">Pesquisa cancelada porque alcançou o número máximo de tentativas de reagendamento</string>
+    <string name="notification_description_approved">Pesquisa aprovada pelo coordenador</string>
+    <string name="notification_description_reproved">Pesquisa reprovada pelo coordenador. A Pesquisa precisa ser realizada novamente.</string>
+    <string name="notification_description_rejected">Atenção, esta pesquisa precisa ser corrigida</string>
+
+    <string name="send_submission">Você esta prestes a finalizar a sua pesquisa. Você tem certeza que deseja continuar? Você não poderá alterar as informações depois, exceto se o seu coordenador solicitar.</string>
+    <string name="warning_invalidfields">Existem erros de preenchimentos nesta página, verifique os campos inválidos ou não preenchidos.</string>
+
+    <string name="currency">R$</string>
+    <string name="forms_to_me">Formulários atribuídos</string>
+    <string name="fields_to_correct">Campos ou questões para corrigir</string>
+    <string name="extra_info">Informações extras</string>
+    <string name="stop_filling_title">Parar o preenchimento - Selecione o motivo</string>
+    <string name="started_at_unavailable">Data de início indisponível</string>
+    <string name="unavailable">Indisponível</string>
+
+    <string name="relogin_text1"><![CDATA[Este tablet contém informações salvas de <b>{name}</b>. Para restaurá-las, digite sua senha.]]></string>
+    <string name="relogin_text2"><![CDATA[<b>Importante:</b> Se você deseja fazer o login com outro usuário, toque no botão Cancelar, acesse o botão Menu no aplicativo e em seguida na opção Sair.]]></string>
+    <string name="relogin_text3"><![CDATA[<b>Atenção:</b> Se você Sair para realizar o login novamente, as pesquisas que precisam ser sincronizadas com o servidor serão perdidas.]]></string>
+
+    <string name="logout_warning">Ao clicar em Sair, todas as informações que precisam ser sincronizadas com o servidor serão perdidas.</string>
+    <string name="send">Enviar</string>
+
+    <string name="warning">Aviso</string>
+    <string name="alert">Alerta</string>
+    <string name="confirm_approve">Atenção, você está prestes a aprovar o preenchimento da pesquisa deste Pesquisador. Você tem certeza de que deseja aprovar?</string>
+    <string name="confirm_correct">Atenção, você está prestes a solicitar que o Pesquisador realize correções na pesquisa. Você tem certeza?</string>
+    <string name="version_s">Versão</string>
+    <string name="invaliddate">Data de reagendamento inválida.</string>
+    <string name="no_corrections">Para solicitar correção ao pesquisador é necessário comentar em pelo menos um campo.</string>
+    <string name="modal_sync_text">Aguarde enquanto as informações são sincronizadas.\nIsto pode levar alguns minutos</string>
+    <string name="login_error_network">Seu tablet está sem conexão com a internet.</string>
+
+    <string name="submissionswap_title">Transferir submissões</string>
+    <string name="submissionswap_selectsource">Selecione o pesquisador que irá CEDER submissões</string>
+    <string name="submissionswap_selectdest">Selecione o pesquisador que irá RECEBER submissões</string>
+    <string name="submissionswap_selecttype">Selecione os tipos de submissões que serão cedidas de {name}</string>
+    <string name="submissionswap_type_all">Todas</string>
+    <string name="submissionswap_type_new">Não iniciadas</string>
+    <string name="submissionswap_type_rescheduled">Reagendadas</string>
+    <string name="submissionswap_type_rejected">Aguardando correção</string>
+    <string name="submissionswap_transferall">Todas</string>
+
+    <!-- GUIDED TOUR -->
+    <string name="guidedtour_touchtocontinue">Toque para continuar</string>
+    <string name="guidedtour_touchtoexit">Sair da ajuda</string>
+</resources>

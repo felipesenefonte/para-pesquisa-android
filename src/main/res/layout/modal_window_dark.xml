@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingLeft="27dp"
+              android:paddingRight="27dp">
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="64dp"
+            android:background="#333">
+
+        <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:id="@+id/modal_icon"
+                android:clickable="true"
+            android:scaleType="center" />
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lipsum"
+                android:id="@+id/modal_title"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="64dp"
+            ntxdev:font_weight="300"/>
+
+        <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:id="@+id/modal_close"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/bt_fechar_lightbox"
+                android:scaleType="center"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"
+            android:clickable="true">
+
+    </FrameLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView">
+
+        <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:id="@+id/modal_content"
+                android:background="#e5e5e5">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"></LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#fff"
+        android:id="@+id/modal_buttoncontainer"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:id="@+id/modal_button"
+            android:background="#fff"
+            android:textColor="#6f6f6f"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            ntxdev:font_weight="300"/>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="#555"
+            android:alpha=".5"
+            android:id="@+id/click_mask"
+            android:visibility="gone"></FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

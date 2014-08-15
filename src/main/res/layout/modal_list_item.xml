@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications_viewall"
+                android:id="@+id/modal_list_item_label"
+                android:textColor="#343434"
+                android:textSize="15dp"
+                android:paddingTop="20dp"
+                android:paddingLeft="19dp"
+            ntxdev:font_weight="300"
+            android:paddingRight="19dp"
+            android:paddingBottom="17dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/modal_list_item_check"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/checkitem"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"
+            android:id="@+id/modal_list_item_separator">
+    </FrameLayout>
+</LinearLayout>

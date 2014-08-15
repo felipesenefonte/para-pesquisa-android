@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:background="#333">
+
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#333333"
+                android:id="@+id/frameLayout"
+            android:paddingLeft="30dp"
+            android:paddingTop="15dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="15dp"
+            android:layout_marginRight="100dp">
+
+            <com.lfdb.parapesquisa.ui.FontTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lipsum"
+                    android:id="@+id/form_fill_comment"
+                    android:textColor="#fff"
+                    android:textSize="13dp" />
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:id="@+id/form_fill_removecomment"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/modorevisao_icon_excluircomentario"
+            android:layout_marginRight="10dp"
+            android:scaleType="center" />
+
+        <ImageView
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:id="@+id/form_fill_editcomment"
+            android:layout_toLeftOf="@+id/form_fill_removecomment"
+            android:src="@drawable/modorevisao_icon_editarcomentario"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:layout_marginRight="5dp" />
+    </RelativeLayout>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="35dp"
+            android:src="@drawable/modorevisao_faixa_preta_bico"/>
+
+</RelativeLayout>

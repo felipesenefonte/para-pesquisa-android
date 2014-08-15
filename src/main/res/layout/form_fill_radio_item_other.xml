@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/form_fill_radio_round"
+        android:src="@drawable/bolinha_selecao" />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="26dp"
+        android:id="@+id/form_fill_radio_text"
+        android:textColor="#000"
+        android:textSize="14dp"
+        android:inputType="text|textNoSuggestions"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"
+        android:hint="Outro..."
+        android:background="#f7f7f7"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textCursorDrawable="@null"/>
+
+</LinearLayout>

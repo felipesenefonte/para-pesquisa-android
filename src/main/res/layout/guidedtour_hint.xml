@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ntxdev="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/guidedtour_container">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:padding="20dp">
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/guidedtour_title"
+            android:layout_marginBottom="10dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:visibility="visible"
+            ntxdev:font_weight="700"/>
+
+        <com.lfdb.parapesquisa.ui.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/guidedtour_desc"
+            android:textColor="#000"
+            android:textSize="16dp" />
+    </LinearLayout>
+</LinearLayout>

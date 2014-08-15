@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:background="#333333">
+
+    <com.lfdb.parapesquisa.ui.FontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lipsum"
+        android:id="@+id/notification_title"
+        android:layout_marginLeft="20dp"
+        android:textColor="#e2e2e2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@+id/notification_time"
+        android:layout_marginRight="20dp"
+        android:textSize="14dp"
+        android:ellipsize="end" />
+
+    <com.lfdb.parapesquisa.ui.FontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lipsum"
+        android:id="@+id/notification_desc"
+        android:layout_marginLeft="20dp"
+        android:textColor="#aaa"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/notification_time"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/notification_title"
+        android:ellipsize="end"
+        android:maxLines="2" />
+
+    <com.lfdb.parapesquisa.ui.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notifications_viewall"
+            android:id="@+id/notification_time"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:textColor="#aaa"
+            android:textAlignment="textEnd"/>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="false"
+            android:background="#666666"
+            android:clickable="false"
+        android:layout_below="@+id/notification_desc"
+        android:layout_marginTop="15dp">
+    </FrameLayout>
+</RelativeLayout>
